@@ -61,7 +61,7 @@ public class Order {
 	
 	public String toString() {
 		for (OrderItem item: this.items) {
-			System.out.printf("%s, $%s, Quantity: %d, Subtotal: $%.2f%n", item.getProduct().getName(), item.getPrice(), item.getQuantity(), item.subTotal());
+			System.out.printf("%-10s $%-10.2f Quantity: %03d   Subtotal: $%.2f%n", item.getProduct().getName(), item.getPrice(), item.getQuantity(), item.subTotal());
 		}
 		
 		return String.format("Total price: $%.2f", this.total());
